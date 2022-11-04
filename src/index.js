@@ -168,7 +168,7 @@ export default class Carousel {
 
     imageUrl.value = url;
 
-    
+
     removeBtn.innerHTML = this.IconClose;
     removeBtn.addEventListener('click', () => {
       block.remove();
@@ -214,7 +214,7 @@ export default class Carousel {
     if (captionText) {
       caption.value = captionText;
     }
-    caption.placeholder = 'Caption...';
+    caption.placeholder = this.api.i18n.t('Caption...');
 
     removeBtn.style.display = 'flex';
 
@@ -281,7 +281,7 @@ export default class Carousel {
     const addButton = make('div', [this.CSS.button, this.CSS.addButton]);
     const block = make('div', [ this.CSS.block ]);
 
-    addButton.innerHTML = `${buttonIcon} Add Image`;
+    addButton.innerHTML = buttonIcon + this.api.i18n.t('Add image');
     addButton.addEventListener('click', () => {
       this.onSelectFile();
     });
